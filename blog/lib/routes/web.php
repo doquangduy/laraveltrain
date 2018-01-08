@@ -34,4 +34,10 @@ Route::group(['prefix'=>'cate','middleware'=>'CheckLogedOut'], function(){
   Route::post('edit/{id}','CategoryController@editcate');
     Route::get('delete/{id}','CategoryController@deletecate');
 });
+Route::group(['prefix'=>'product','middleware'=>'CheckLogedOut'],function(){
+  Route::get('/','ProductController@getlistproduct');
+  Route::get('edit/{id}','ProductController@editproduct');
+  Route::get('delete/{id}','ProductController@deleteproduct');
+  Route::get('add','ProductController@insertproduct');
+});
 });

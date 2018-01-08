@@ -55,7 +55,17 @@
 									</div>
 									<div class="form-group" >
 										<label>Miêu tả</label>
-										<textarea required name="description"></textarea>
+										<textarea class="ckeditor" required name="description"></textarea>
+										<script type="text/javascript">
+	var editor = CKEDITOR.replace('description',{
+		language:'vi',
+		filebrowserFlashBrowseUrl: '../../public/backend/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserImageBrowseUrl: '../../public/backend/ckfinder/ckfinder.html?Type=Images',
+		filebrowserImageUploadUrl: '../../public/backend/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl: '../../public/backend/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
+	});
+</script>
+
 									</div>
 									<div class="form-group" >
 										<label>Danh mục</label>
